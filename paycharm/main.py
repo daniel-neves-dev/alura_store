@@ -1,8 +1,19 @@
 from load_stores import stores
+from sell_by_product import *
+from sell_by_category import *
 from store_fare import plot_store_fare_table, df_store_fare, plot_store_fare_bar_plot
 from customer_review import  plot_table_customer_rank, plot_customer_rank_bar_graph, df_customer_rank
 from store_revenue import plot_tabel_revenue, df_revenue, plot_revenue_bar_graph
-from sell_by_category import *
+
+
+#----- PRODUCTS -----------
+table_top_tree_sell(products)
+table_bottom_tree_sell(products)
+product_data = []
+for store in products.keys():
+    product_data.extend(frame_top_tree_product_sell(products[store], store))
+plot_product_bar_graph(product_data)
+
 
 #----------- SELL BY CATEGORY --------------
 plot_table_categories_most_sell(categories)
@@ -25,4 +36,5 @@ plot_customer_rank_bar_graph(df_customer_rank)
 
 plot_tabel_revenue(df_revenue)
 plot_revenue_bar_graph(df_revenue)
+
 
