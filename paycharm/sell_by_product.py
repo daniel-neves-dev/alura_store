@@ -42,3 +42,35 @@ def table_bottom_tree_sell(dic_products:dict[str, pd.DataFrame]):
         print('\n' + title.center(width))
         print(table_str)
 
+def frame_top_tree_product_sell(s_products:pd.DataFrame, store_name:str )-> list:
+    """   """
+    top_tree = s_products.nlargest(3,'Quantidade')
+    frame = [
+        (f"{store_name}\n{row['Produto']}", row['Quantidade'])
+         for _, row in top_tree.iterrows()]
+
+    return frame
+
+def plot_product_bar_graph(product_list:list):
+    labels, values = zip(*product_list)
+
+    stores_n = [lbl.split('\n')[0] for lbl in labels]
+    stores_order = sorted(set(stores_n))
+    color_map = {s: plt.cm.tab10(i) for i, s in enumerate(stores_order)}
+    colors = [color_map[s] for s in stores_n]
+
+    fig, axs = plt.subplots(figsize=(16,13))
+
+    bars = axs.bar(labels, values, color = colors, width=0.6)
+    axs.bar_label(bars, fontsize=12)
+    axs.set_title('Produtos com maior número de unidades vendidas\n Top 3', fontsize=14, fontweight='bold')
+    axs.spines[['top', 'left', 'right']].set_visible(False)
+    axs.yaxis.set_visible(False)
+
+    axs.set_xticks(range(len(labels)))
+    axs.set_xticklabels(labels, rotation=30, ha='right')
+
+    legends = [Patch(color=cor, label=loja) for loja, cor in color_map.items()]
+    axs.legend(handles=legends, title='Lojas', loc="upper right")
+
+    plt.show()
