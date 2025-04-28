@@ -8,7 +8,8 @@ url4 = "https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-scienc
 URLS = [url1, url2, url3, url4]
 
 def load_stores(urls) -> pd.DataFrame:
-    """ Load stores from a list """
+    """ Load stores from a list of stores"""
+
     df = pd.read_csv(urls, index_col=0)
     return df
 
