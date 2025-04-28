@@ -8,4 +8,3 @@ def library_used_versions():
         f'\nPandas: {pd.__version__}, '
         f'\nMatplotlib: {mtl.__version__},')
 
-library_used_versions()
