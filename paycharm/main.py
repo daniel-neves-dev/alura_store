@@ -1,0 +1,3 @@
+from store_fare import plot_store_fare_table, df_store_fare
+
+plot_store_fare_table(df_store_fare)
