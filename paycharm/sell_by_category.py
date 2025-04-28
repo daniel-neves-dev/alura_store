@@ -1,4 +1,4 @@
-from pacakes import pd, plt, PrettyTable, Patch
+from packages import pd, plt, PrettyTable, Patch
 from load_stores import stores
 
 categories = {store_name: df.groupby('Categoria do Produto').size()
