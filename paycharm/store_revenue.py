@@ -5,8 +5,8 @@ revenues = {store_name: (sum(df['Preço'])) for store_name, df in stores.items()
 df_revenue = (pd.DataFrame(revenues.items(), columns=['Loja', 'Preço'])
                .rename(columns={'Preço':'Faturamento'}))
 
-def plot_tabel_revenue(revenue_df: pd.DataFrame):
-    """ Plot the total revenues for all stores """
+def plot_tabel_revenue(revenue_df: pd.DataFrame)->None:
+    """ Plot the total revenue for all stores """
 
     """
         Enter with the revenue in data frame format 
@@ -26,7 +26,9 @@ def plot_tabel_revenue(revenue_df: pd.DataFrame):
     print('\n' + title.center(width))
     print(tabel_str)
 
-def plot_revenue_bar_graph(revenue_df: pd.DataFrame):
+def plot_revenue_bar_graph(revenue_df: pd.DataFrame)->None:
+    """ Plot the bar graph total revenue for all stores """
+
     fig, axs = plt.subplots(figsize=(10,10))
     bar_colors = ['tab:red', 'tab:blue', 'tab:green', 'tab:orange']
 

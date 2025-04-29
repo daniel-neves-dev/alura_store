@@ -41,6 +41,7 @@ def main():
 
         # ---- NET REVENUES -----
         plot_table_net_revenue(df_net_revenue)
+        plot_bar_net_revenue(df_net_revenue)
 
         break
 if __name__=='__main__':

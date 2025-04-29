@@ -4,7 +4,7 @@ from load_stores import stores
 store_fare = {store_name: round(df['Frete'].mean()) for store_name, df in stores.items()}
 df_store_fare = pd.DataFrame(store_fare.items(), columns=['Loja', 'Frete'])
 
-def plot_store_fare_table(store_fare_df:pd.DataFrame):
+def plot_store_fare_table(store_fare_df:pd.DataFrame)-> None:
     """ Plot the average store fare for each store """
 
     table = PrettyTable(['Loja', 'Frete'])
@@ -23,6 +23,7 @@ def plot_store_fare_table(store_fare_df:pd.DataFrame):
     print(table_str)
 
 def plot_store_fare_bar_plot(store_fare_df:pd.DataFrame)->None:
+    """ Plot the average fare bar graph for each store """
     fig, axs = plt.subplots(figsize=(12,12))
     bar_colors = ['tab:red', 'tab:blue', 'tab:green', 'tab:orange']
 

@@ -4,7 +4,7 @@ from load_stores import stores
 products = {store_name: df.groupby('Produto').size().reset_index(name='Quantidade')
             for store_name, df in stores.items()}
 
-def table_top_tree_sell(dic_products:dict[str, pd.DataFrame]):
+def table_top_tree_sell(dic_products:dict[str, pd.DataFrame])-> None:
     """  Plot a table of the top 3 products most sold """
 
     for store , df in dic_products.items():
@@ -23,7 +23,7 @@ def table_top_tree_sell(dic_products:dict[str, pd.DataFrame]):
         print('\n' + title.center(width))
         print(table_str)
 
-def table_bottom_tree_sell(dic_products:dict[str, pd.DataFrame]):
+def table_bottom_tree_sell(dic_products:dict[str, pd.DataFrame])-> None:
     """  Plot a table of the 3 products least sold """
 
     for store , df in dic_products.items():

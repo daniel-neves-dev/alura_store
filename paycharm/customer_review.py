@@ -5,7 +5,7 @@ customers_rank = {store_name: round(df['Avaliação da compra'].mean(),2) for st
 df_customer_rank = (pd.DataFrame(customers_rank.items(), columns=['Loja', 'Avaliação da compra'])
                     .rename(columns={'Avaliação da compra':'Avaliação média'}))
 
-def plot_table_customer_rank(customer_rank_df:pd.DataFrame):
+def plot_table_customer_rank(customer_rank_df:pd.DataFrame)-> None:
     """  Plot the table average customer rank review for each store """
 
     customer_rank_df = customer_rank_df.sort_values(by='Avaliação média',ascending=False)
@@ -24,7 +24,7 @@ def plot_table_customer_rank(customer_rank_df:pd.DataFrame):
     print('\n' + title.center(width))
     print(table_str)
 
-def plot_customer_rank_bar_graph(customer_rank_df:pd.DataFrame):
+def plot_customer_rank_bar_graph(customer_rank_df:pd.DataFrame)-> None:
     """  Plot the bar graph average customer rank review for each store """
 
     customer_rank_df = customer_rank_df.sort_values(by='Avaliação média', ascending=False)

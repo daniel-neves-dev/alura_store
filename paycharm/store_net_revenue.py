@@ -6,7 +6,9 @@ net_revenue = {store_name: (df['Preço']-df['Frete']).mean()
 df_net_revenue = pd.DataFrame(list(net_revenue.items()), columns = ['Loja', 'Faturamento líquido médio'])
 
 
-def plot_table_net_revenue(net_revenue_df:pd.DataFrame):
+def plot_table_net_revenue(net_revenue_df:pd.DataFrame)-> None:
+    """ Plot a net revenue of each store table """
+
     net_revenue_df = net_revenue_df.sort_values(by='Faturamento líquido médio', ascending=False)
 
     table = PrettyTable(['Loja', 'Faturamento líquido médio'])
@@ -22,7 +24,9 @@ def plot_table_net_revenue(net_revenue_df:pd.DataFrame):
     print('\n' + title.center(width))
     print(table_str)
 
-def plot_bar_net_revenue(net_revenue_df:pd.DataFrame):
+def plot_bar_net_revenue(net_revenue_df:pd.DataFrame)->None:
+    """ Plot a bar graph net revenue of each store table """
+
     net_revenue_df = net_revenue_df.sort_values(by='Faturamento líquido médio', ascending=False)
     fig, axs = plt.subplots(figsize=(12, 12))
     bar_colors = ['tab:red', 'tab:blue', 'tab:green', 'tab:orange']
@@ -42,5 +46,4 @@ def plot_bar_net_revenue(net_revenue_df:pd.DataFrame):
 
     plt.show()
 
-plot_bar_net_revenue(df_net_revenue)
 

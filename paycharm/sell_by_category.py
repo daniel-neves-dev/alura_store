@@ -6,7 +6,7 @@ categories = {store_name: df.groupby('Categoria do Produto').size()
             .rename(columns = {'Categoria do Produto':'Categoria'})
             for store_name, df in stores.items()}
 
-def plot_table_categories_most_sell(dict_categories):
+def plot_table_categories_most_sell(dict_categories)-> None:
     """  Plot store products category most sold """
 
     table = PrettyTable(['Loja', 'Categoria', 'Quantidade'])
