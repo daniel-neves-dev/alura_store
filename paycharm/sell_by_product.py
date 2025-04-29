@@ -43,7 +43,7 @@ def table_bottom_tree_sell(dic_products:dict[str, pd.DataFrame]):
         print(table_str)
 
 def frame_top_tree_product_sell(s_products:pd.DataFrame, store_name:str )-> list:
-    """   """
+    """ Make a top tree most product sold list """
     top_tree = s_products.nlargest(3,'Quantidade')
     frame = [
         (f"{store_name}\n{row['Produto']}", row['Quantidade'])
@@ -51,7 +51,8 @@ def frame_top_tree_product_sell(s_products:pd.DataFrame, store_name:str )-> list
 
     return frame
 
-def plot_product_bar_graph(product_list:list):
+def plot_product_bar_graph(product_list:list)->None:
+    """  Plot a bar graphic of the 3 products most sold """
     labels, values = zip(*product_list)
 
     stores_n = [lbl.split('\n')[0] for lbl in labels]
