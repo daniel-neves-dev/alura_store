@@ -22,7 +22,7 @@ def plot_store_fare_table(store_fare_df:pd.DataFrame):
     print('\n' + title.center(width))
     print(table_str)
 
-def plot_store_fare_bar_plot(store_fare_df:pd.DataFrame):
+def plot_store_fare_bar_plot(store_fare_df:pd.DataFrame)->None:
     fig, axs = plt.subplots(figsize=(12,12))
     bar_colors = ['tab:red', 'tab:blue', 'tab:green', 'tab:orange']
 
