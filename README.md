@@ -1,13 +1,12 @@
-# 📊 Retail Stores Sales Analysis
+# 📈 Stores Sales Analysis
 
-> Data‑driven recommendation on which of four stores should be divested
+## 🎯 Main goal: data‑driven recommendation on which of four stores should be shold
 
----
+## 💻 Project Overview
+This repository contains the complete workflow used to analyse the performance of four retail stores (Loja 1 – Loja 4) and to recommend which outlet the owner (Sr. João) should sell. The analysis integrates **Python**, **Pandas**, **Matplotlib**, 
+**Prettytable** and Google **Colab** otebooks to evaluate sales, revenue, customer ratings and product mix.
 
-## 1 – Project Overview
-This repository contains the complete workflow used to analyse the performance of four retail stores (Loja 1 – Loja 4) and to recommend which outlet the owner (Sr. João) should sell. The analysis integrates **Python**, **Pandas**, **Matplotlib**, **Geopandas** and Google **Colab** notebooks to evaluate sales, freight, customer ratings and product mix.
-
-## 2 – Objectives
+## 📋 Objectives
 * Consolidate raw CSV sales data for all stores
 * Calculate key metrics: revenue, net margin, average freight, customer rating
 * Identify best/worst‑selling products and categories per store
@@ -35,17 +34,7 @@ $ pip install -r requirements.txt
 * **Locally:** `jupyter lab` then open files in `/notebooks`.
 * **Google Colab:** click the badge below to launch in Colab with all dependencies pre‑installed.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<user>/retail‑stores‑analysis/blob/main/notebooks/01_data_clean.ipynb)
-
-## 6 – Key Results
-| Metric | Best | Worst |
-|--------|------|-------|
-| **Revenue** | Loja 1 (R$ 1.53 M) | Loja 4 (R$ 1.38 M) |
-| **Net Margin (avg.)** | Loja 1 (R$ 615) | Loja 4 (R$ 556) |
-| **Customer Rating** | Loja 3 (4.05★) | Loja 1 (3.98★) |
-| **Freight Cost** | Loja 4 (R$ 31) | Loja 1 (R$ 35) |
-
-*Loja 4* under‑performs on revenue and margin despite the lowest freight cost, and shows weak sales in **instrumentos musicais**. Consequently, the final report recommends selling Loja 4.
+[![Open In Colab])]
 
 ## 7 – Visualisations
 All charts are generated programmatically and saved under `report/figures/`:
