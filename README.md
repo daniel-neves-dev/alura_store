@@ -1,3 +1,9 @@
+<div  style="display: flex;">
+    <img alt="Logo da empresa Alura" src="https://www.cuponation.com.br/images/fit-in/256x/images/a/alura_logo.png", style = "width:100px;">
+    <img class="company-logo__img" src="https://cdn2.gnarususercontent.com.br/1/1221562/b6256fa6-5fde-4cdd-a4a3-d33ebc90bb6c.png" alt="Logo da empresa - Oracle ONE - Br Geral 8">
+    <h1>Turma 8</h1>
+</div>
+
 # 📈 Stores Sales Analysis
 
 ## 🎯 Main goal: data‑driven recommendation on which of four stores should be shold
@@ -12,6 +18,28 @@ This repository contains the complete workflow used to analyse the performance o
 * Identify best/worst‑selling products and categories per store
 * Visualise insights with at least three chart types (bar, pie, scatter/geo‑map)
 * Produce a written report recommending the store to be sold (Loja 4)
+
+## 📊 Visualisations
+<table>
+  <tr>
+    <td valign="top"><img src="https://github.com/user-attachments/assets/0bb01e2e-18bb-45b7-988f-6b448a2fdfff"></td>
+    <td valign="top"><img src="https://github.com/user-attachments/assets/68791cd7-7345-451a-b211-801d47d3454e"></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td valign="top"><img src="https://github.com/user-attachments/assets/5bae4c9a-bc13-4871-b504-aef4f2496cbd"></td>
+    <td valign="top"><img src="https://github.com/user-attachments/assets/24356bc7-8e3d-4dab-b9f3-3d378c089379"></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td valign="top"><img src="https://github.com/user-attachments/assets/590c2fbd-745e-4256-9ad7-6d7ba5100467"></td>
+    <td valign="top"><img src="https://github.com/user-attachments/assets/16b857e1-3fae-4f76-a0b8-c4b2fab62485"></td>
+  </tr>
+</table>
 
 
 
