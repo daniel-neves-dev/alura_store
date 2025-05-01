@@ -68,48 +68,43 @@ This repository contains the complete workflow used to analyse the performance o
 ### <em>Store 4</em>
 Store 4 displays **inferior** financial performance compared with the others, slow inventory turnover in musical instruments, and—despite its lower shipping cost—this **does not translate** into greater customer satisfaction.
 
+## 🤖 Technologies used:
+- Python 3 v3.10
+- Pandas
+- Matiplotlib
+- Prettytable
 
+# Project versions:
+# 🔗 Colab:
 
-## 5 – Environment & Installation
+[Colab](https://github.com/daniel-neves-dev/alura_store/blob/main/AluraStoreBr.ipynb)
+
+# 📂 Paycharm:
+
 ```bash
-# Clone the repo
-$ git clone https://github.com/<user>/retail‑stores‑analysis.git
-$ cd retail‑stores‑analysis
+# Crate a project folder:
+mkdir store_project
 
-# (Option A) Conda – recommended
-$ conda env create -f environment.yml
-$ conda activate retail‑stores
-
-# (Option B) pip
-$ python -m venv .venv && source .venv/bin/activate
-$ pip install -r requirements.txt
+#open the folder:
+cd store_project
+```
+Make Conda enviroment:
+```bash
+conda create --name store
+conda activate store
 ```
 
-### Running the notebooks
-* **Locally:** `jupyter lab` then open files in `/notebooks`.
-* **Google Colab:** click the badge below to launch in Colab with all dependencies pre‑installed.
+Clone the repo:
+```bash
+git clone https://github.com/daniel-neves-dev/alura_store.git
+cd alura_store
+cd paycharm
+```
 
-[![Open In Colab])]
+```bash
+# Install packages: 
+pip install -r requirements.txt
 
-## 7 – Visualisations
-All charts are generated programmatically and saved under `report/figures/`:
-* `revenue_by_store.png` – bar chart of gross revenue
-* `top_products_per_store.png` – grouped bar chart
-* `categories_heatmap.png` – category performance heat‑map
-* `stores_map.html` – interactive geo‑map via Geopandas/Folium
-
-## 8 – Reproducibility
-The notebook `03_final_report.ipynb` orchestrates the entire pipeline from raw data to PDF. Execute all cells (⯈ Run All) to reproduce numbers and figures.
-
-## 9 – Contributing
-Pull requests are welcome! Please open an issue first to discuss major changes.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feat/my-feature`)
-3. Commit your changes (`git commit -am 'Add my feature'`)
-4. Push to the branch (`git push origin feat/my-feature`)
-5. Open a pull request
-
-## 10 – License
-Distributed under the **MIT License** — see `LICENSE` for full text.
-
+# Start the program:
+python3 main.py
+```
